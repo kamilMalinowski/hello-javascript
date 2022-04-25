@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+.main__description {
+  color: tan;
+  padding: 0 20px 40px;
+}
+.section {
+  background-color: tan;
+  margin-bottom: 20px;
+}
+.section__title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+.section__description {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.countdown {
+  background-color: black;
+  border-radius: 8px;
+  width: 180px;
+  height: 60px;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  position: relative;
+  border: 4px solid grey;
+}
+.countdown::after {
+  content: '';
+  bottom: -16px;
+  left: 50%;
+  border-top: 4px solid black;
+  transform: translateX(-50%);
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 160px;
+  background-color: grey;
+}
+.countdown__numbers {
+  color: brown;
+  font-weight: bold;
+  font-size: 44px;
+}
+
+.game {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  grid-gap: 4px;
+}
+.game__button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+  font-size: 40px;
+  color: tan;
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
